@@ -1,0 +1,76 @@
+GUI with Go
+Myth or reality
+
+* About Qt
+
+Qt is a cross-platform application framework that is used for developing application software that can be run on various software and hardware platforms with little or no change in the underlying codebase.
+
+* QObject
+
+Base of all classes
+
+.code qobject.go /START OMIT/,/END OMIT/
+
+* Signal->Slot
+
+.image abstract-connections.png
+
+* QWidget
+
+Like Object, but we can see it
+
+.code qwidget.go /START OMIT/,/END OMIT/
+
+example....
+
+* QGuiApplication
+
+Manages the GUI application's control flow and main settings
+
+.code guiapp.go /START OMIT/,/END OMIT/
+
+example...
+
+* Also you can use OpenGL
+
+.code ../OpenGL/main.go /START OMIT/,/END OMIT/
+
+example...
+
+* QML
+Qt Meta Language
+
+.code qml.qml
+
+* Let's start
+
+.code setappname.go /START OMIT/,/END OMIT/
+
+* Quick view
+
+.code qview.go /START OMIT/,/END OMIT/
+
+* main.qml
+
+.code empty.qml
+
+* Demo time!
+
+* But before...
+
+qtdeploy build desktop
+qtdeploy -docker build android
+qtdeploy -docker build windows_64_static
+blackmagic+ qtdeploy -vagrant build darwin/darwin
+
+* Conclusions
+
+pros
+
+- nice looking
+- easy to build for different platforms
+
+cons
+
+- build longs ages
+- LGPLicense
